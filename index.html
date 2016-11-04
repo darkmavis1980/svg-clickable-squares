@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Test svg</title>
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function(){
+      console.log('ready!');
+      $('#boxes > g').on('click', function(e){
+        e.preventDefault();
+        $(this).toggleClass('hidden');
+        console.log(this);
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id="square">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    	 viewBox="0 0 1366 768" style="enable-background:new 0 0 1366 768;" xml:space="preserve">
+    <style type="text/css">
+    	.st0{fill:#046296;}
+    	.st1{fill:#FFFFFF; cursor: pointer;}
+    	.st2{fill:#FF0000; cursor: pointer;}
+      .hidden{opacity: 0};
+    </style>
+    <g id="base">
+    	<g>
+    		<rect x="359.5" y="116.5" class="st0" width="499" height="499"/>
+    		<path d="M858,117v498H360V117H858 M859,116H359v500h500V116L859,116z"/>
+    	</g>
+    </g>
+    <g id="boxes">
+    	<g id="box4">
+    		<rect x="359.5" y="116.5" class="st1" width="249" height="249"/>
+    		<path d="M608,117v248H360V117H608 M609,116H359v250h250V116L609,116z"/>
+    	</g>
+    	<g id="box3">
+    		<rect x="609.5" y="116.5" class="st1" width="249" height="249"/>
+    		<path d="M858,117v248H610V117H858 M859,116H609v250h250V116L859,116z"/>
+    	</g>
+    	<g id="box2">
+    		<rect x="359.5" y="366.5" class="st1" width="249" height="249"/>
+    		<path d="M608,367v248H360V367H608 M609,366H359v250h250V366L609,366z"/>
+    	</g>
+    	<g id="box1">
+    		<rect x="609.5" y="366.5" class="st2" width="249" height="249"/>
+    		<path d="M858,367v248H610V367H858 M859,366H609v250h250V366L859,366z"/>
+    	</g>
+    </g>
+    </svg>
+  </div>
+</body>
+</html>
